@@ -1,14 +1,14 @@
 .app {
   position: relative;
   min-height: 100vh;
-  background: #F1F6F2;
+  background: #F1F6F2; 
 }
 
 .pantalla {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 24px 24px 110px; /* espai barra */
+  padding: 24px 24px 110px;
   background: #F1F6F2;
 }
 
@@ -24,4 +24,42 @@
   max-width: 100%;
   max-height: 60vh;
   object-fit: contain;
+}
+
+.barra {
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  width: calc(100% - 32px);
+  max-width: 420px;
+  display: flex;
+  gap: 6px;
+  padding: 6px;
+  background: #C0D9C2;
+  border-radius: 24px;
+}
+
+.icona {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.pestanya {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 0;
+  border: none;
+  border-radius: 20px;
+  background: transparent;
+  color: #242424;
+  font-size: 13px;
+}
+
+.pestanya.activa {
+  background: #B7D0B9;
 }
