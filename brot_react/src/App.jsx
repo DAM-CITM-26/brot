@@ -7,14 +7,45 @@ const PESTANYES = [
   { id: "perfil", etiqueta: "Perfil", icona: "/perfil.svg" },
 ];
 
+const IMATGE_CONSTRUCCIO = "\Hello Kitty en construcción.png";
+
+function Pantalla({ titol, children }) {
+  return (
+    <div className="pantalla">
+      <h1 className="titol">{titol}</h1>
+      <div className="cos">{children}</div>
+    </div>
+  );
+}
+
+function PantallaEnConstruccio() {
+  return (
+    <img
+      src={IMATGE_CONSTRUCCIO}
+      alt="En construcció"
+      className="imatge-construccio"
+    />
+  );
+}
+
 function PantallaReceptes() {
-  return <div className="pantalla" />;
+  return <Pantalla titol="Receptes" />;
 }
+
 function PantallaBalanc() {
-  return <div className="pantalla" />;
+  return (
+    <Pantalla titol="Balanç setmanal">
+      <PantallaEnConstruccio />
+    </Pantalla>
+  );
 }
+
 function PantallaPerfil() {
-  return <div className="pantalla" />;
+  return (
+    <Pantalla titol="Perfil">
+      <PantallaEnConstruccio />
+    </Pantalla>
+  );
 }
 
 export default function App() {
@@ -22,7 +53,7 @@ export default function App() {
 
   return (
     <div className="app">
-      <main className="contingut">
+      <main>
         {pestanya === "receptes" && <PantallaReceptes />}
         {pestanya === "balanc" && <PantallaBalanc />}
         {pestanya === "perfil" && <PantallaPerfil />}
