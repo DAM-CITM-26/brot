@@ -50,6 +50,7 @@ function PantallaPerfil() {
 
 export default function App() {
   const [pestanya, setPestanya] = useState("receptes");
+  const indexActiu = PESTANYES.findIndex((p) => p.id === pestanya);
 
   return (
     <div className="app">
@@ -60,6 +61,10 @@ export default function App() {
       </main>
 
       <nav className="barra">
+        <div
+          className="indicador"
+          style={{ transform: `translateX(${indexActiu * 100}%)` }}
+        />
         {PESTANYES.map((p) => (
           <button
             key={p.id}
