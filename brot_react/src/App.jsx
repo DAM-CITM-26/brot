@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import "./index.css";
 
 const PESTANYES = [
   { id: "receptes", etiqueta: "Receptes", icona: "/receptes.svg" },
