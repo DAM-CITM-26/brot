@@ -12,7 +12,9 @@ const IMATGE_CONSTRUCCIO = "\Hello Kitty en construcción.png";
 function Pantalla({ titol, children }) {
   return (
     <div className="pantalla">
-      <h1 className="titol">{titol}</h1>
+      <header className="capcalera">
+        <h1 className="titol">{titol}</h1>
+      </header>
       <div className="cos">{children}</div>
     </div>
   );

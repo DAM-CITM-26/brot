@@ -12,6 +12,11 @@
   background: #F1F6F2;
 }
 
+.capcalera {
+  padding: 24px 24px 16px;
+  border-bottom: 2px solid #C0D9C2; 
+}
+
 .titol {
   margin: 0;
   font-family: "Plus Jakarta Sans", system-ui, sans-serif;
