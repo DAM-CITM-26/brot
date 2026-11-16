@@ -1,3 +1,25 @@
+.app {
+  position: relative;
+  min-height: 100vh;
+  background: #F1F6F2;
+}
+
+.pantalla {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 24px 110px; /* espai barra */
+  background: #F1F6F2;
+}
+
+.titol {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #242424;
+}
+
 .imatge-construccio {
   max-width: 100%;
   max-height: 60vh;
