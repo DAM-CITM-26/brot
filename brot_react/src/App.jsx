@@ -40,7 +40,7 @@ function PantallaReceptes() {
 
   return (
     <Pantalla titol="Receptes">
-      <div className="receptes-contingut">
+      <div>
         <label className="buscador">
           <svg
             className="buscador-icona"
