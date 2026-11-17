@@ -72,6 +72,28 @@
   background-color: #4c1223; /* no funciona */
 }
 
+.filtres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.filtre {
+  padding: 6px 14px;
+  border: transparent;
+  border-radius: 999px;
+  background: #FFFFFF;
+  color: #242424;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.filtre-actiu {
+  background: #FCEEF2;
+}
+
 .llista {
   width: 100%;
   align-self: flex-start;

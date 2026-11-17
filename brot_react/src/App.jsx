@@ -70,7 +70,7 @@ function PantallaReceptes() {
             <button
               key={f.id}
               type="button"
-              className={`filtre ${filtresActius.includes(f.id) ? "actiu" : ""}`}
+              className={`filtre ${filtresActius.includes(f.id) ? "filtre-actiu" : ""}`}
               onClick={() => alternaFiltre(f.id)}
               aria-pressed={filtresActius.includes(f.id)}
             >
