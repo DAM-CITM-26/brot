@@ -3,6 +3,7 @@ import "./App.css";
 import "./index.css";
 import { getReceptes } from "./receptes.jsx";
 import TargetaRecepta from "./TargetaRecepta";
+import { FILTRES, filtreReceptes } from "./filtreReceptes.js";
 
 const PESTANYES = [
   { id: "receptes", etiqueta: "Receptes", icona: "/receptes.svg" },
@@ -35,41 +36,57 @@ function PantallaEnConstruccio() {
 
 function PantallaReceptes() {
   const receptes = getReceptes();
-  const [cerca, setCerca] = useState("");
-
-  const receptesFiltrades = receptes.filter((r) =>
-    r.nom.toLowerCase().includes(cerca.toLowerCase().trim())
-  );
+  const { cerca, setCerca, filtresActius, alternaFiltre, receptesFiltrades } =
+    filtreReceptes(receptes);
 
   return (
     <Pantalla titol="Receptes">
-      <label className="buscador">
-        <svg
-          className="buscador-icona"
-          viewBox="0 0 24 24"
-          width="24"
-          height="24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          aria-hidden="true"
-        >
-          <circle cx="10.5" cy="10.5" r="6.5" />
-          <line x1="15.5" y1="15.5" x2="21" y2="21" />
-        </svg>
-        <input
-          type="search"
-          placeholder="Cerca receptes vegetarianes"
-          value={cerca}
-          onChange={(e) => setCerca(e.target.value)}
-        />
-      </label>
+      <div className="receptes-contingut">
+        <label className="buscador">
+          <svg
+            className="buscador-icona"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            aria-hidden="true"
+          >
+            <circle cx="10.5" cy="10.5" r="6.5" />
+            <line x1="15.5" y1="15.5" x2="21" y2="21" />
+          </svg>
+          <input
+            type="search"
+            placeholder="Cerca receptes vegetarianes"
+            value={cerca}
+            onChange={(e) => setCerca(e.target.value)}
+          />
+        </label>
 
-      <div className="llista">
-        {receptesFiltrades.map((r) => (
-          <TargetaRecepta key={r.id} recepta={r} />
-        ))}
+        <div className="filtres">
+          {FILTRES.map((f) => (
+            <button
+              key={f.id}
+              type="button"
+              className={`filtre ${filtresActius.includes(f.id) ? "actiu" : ""}`}
+              onClick={() => alternaFiltre(f.id)}
+              aria-pressed={filtresActius.includes(f.id)}
+            >
+              {f.text}
+            </button>
+          ))}
+        </div>
+
+        <div className="llista">
+          {receptesFiltrades.map((r) => (
+            <TargetaRecepta key={r.id} recepta={r} />
+          ))}
+          {receptesFiltrades.length === 0 && (
+            <p>No s'ha trobat cap recepta.</p>
+          )}
+        </div>
       </div>
     </Pantalla>
   );
