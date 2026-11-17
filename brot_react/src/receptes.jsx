@@ -33,7 +33,7 @@ export const receptes = [
   },
   {
     id: 5,
-    nom: "Macarrones con pesto",
+    nom: "Macarrons amb pesto",
     origen: "comunitat",
     minuts: 50,
     racions: 2,

@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 import "./index.css";
-
+import { getReceptes } from "./receptes.jsx";
+import TargetaRecepta from "./TargetaRecepta";
 
 const PESTANYES = [
   { id: "receptes", etiqueta: "Receptes", icona: "/receptes.svg" },
@@ -33,8 +34,18 @@ function PantallaEnConstruccio() {
 }
 
 function PantallaReceptes() {
-  return <Pantalla titol="Receptes" />;
+  const receptes = getReceptes();
+  return (
+    <Pantalla titol="Receptes">
+      <div className="llista">
+        {receptes.map((r) => (
+          <TargetaRecepta key={r.id} recepta={r} />
+        ))}
+      </div>
+    </Pantalla>
+  );
 }
+
 
 function PantallaBalanc() {
   return (
