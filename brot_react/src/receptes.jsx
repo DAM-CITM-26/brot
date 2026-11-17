@@ -6,6 +6,7 @@ export const receptes = [
     minuts: 25,
     racions: 2,
     imatge: "public/cigrons.png",
+    etiquetes: ["sense-lactics", "alt-proteines", "sense-fruits-secs"],
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const receptes = [
     minuts: 35,
     racions: 2,
     imatge: "public/tofu.jpeg",
+    etiquetes: ["sense-lactics", "alt-proteines", "sense-fruits-secs"],
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ export const receptes = [
     minuts: 30,
     racions: 1,
     imatge: "public/crema.jpg",
+    etiquetes: ["sense-lactics", "sense-fruits-secs"],
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ export const receptes = [
     minuts: 50,
     racions: 2,
     imatge: "public/lasanya.jpg",
+    etiquetes: ["sense-fruits-secs"],
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ export const receptes = [
     minuts: 50,
     racions: 2,
     imatge: "public/macarrons.jpeg",
+    etiquetes: [],
   },
   {
     id: 6,
@@ -46,6 +51,7 @@ export const receptes = [
     minuts: 15,
     racions: 2,
     imatge: "public/hummus.jpeg",
+    etiquetes: ["sense-lactics", "alt-proteines", "sense-fruits-secs"],
   },
   {
     id: 7,
@@ -54,6 +60,7 @@ export const receptes = [
     minuts: 40,
     racions: 3,
     imatge: "public/curry.jpeg",
+    etiquetes: ["sense-lactics", "alt-proteines", "sense-fruits-secs"],
   },
   {
     id: 8,
@@ -62,6 +69,7 @@ export const receptes = [
     minuts: 20,
     racions: 1,
     imatge: "public/quinoa.jpeg",
+    etiquetes: ["sense-lactics", "alt-proteines"],
   },
   {
     id: 9,
@@ -70,6 +78,7 @@ export const receptes = [
     minuts: 35,
     racions: 4,
     imatge: "public/hamburguesa.webp",
+    etiquetes: ["sense-lactics", "alt-proteines", "sense-fruits-secs"],
   },
   {
     id: 10,
@@ -78,6 +87,7 @@ export const receptes = [
     minuts: 45,
     racions: 2,
     imatge: "public/escalivada_ous.jpg",
+    etiquetes: ["sense-lactics", "alt-proteines", "sense-fruits-secs"],
   },
 ];
 
