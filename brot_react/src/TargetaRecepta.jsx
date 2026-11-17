@@ -18,7 +18,7 @@ export default function TargetaRecepta({ recepta }) {
       </div>
 
       <button className="targeta-guardar" onClick={() => setGuardada(!guardada)}>
-        {guardada ? "GUARDADA" : "GUARDAR"}
+        {guardada ? "♥" : "♡"}
       </button>
     </article>
   );
