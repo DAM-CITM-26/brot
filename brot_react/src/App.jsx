@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import "./index.css";
 
+
 const PESTANYES = [
   { id: "receptes", etiqueta: "Receptes", icona: "/receptes.svg" },
   { id: "balanc", etiqueta: "Balanç", icona: "/balanc.svg" },
@@ -66,12 +67,12 @@ export default function App() {
       <nav className="barra">
         <div
           className="indicador"
-          style={{ transform: `translateX(${indexActiu * 100}%)` }}
+          style={{ transform: `translateX(${indexActiu * 100}%)` }} //mir
         />
         {PESTANYES.map((p) => (
           <button
             key={p.id}
-            className={`pestanya ${pestanya === p.id ? "activa" : ""}`}
+            className={`pestanya ${pestanya === p.id ? "activa" : ""}`} //mir
             onClick={() => setPestanya(p.id)}
           >
             <img src={p.icona} alt="" className="icona" />

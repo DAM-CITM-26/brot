@@ -59,7 +59,7 @@
   width: calc((100% - 12px) / 3);
   background: #B7D0B9;
   border-radius: 20px;
-  transition: transform 0.50s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.50s cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .pestanya {
