@@ -43,13 +43,28 @@ function PantallaReceptes() {
 
   return (
     <Pantalla titol="Receptes">
-      <input
-        type="search"
-        className="buscador"
-        placeholder="Cerca una recepta..."
-        value={cerca}
-        onChange={(e) => setCerca(e.target.value)}
-      />
+      <label className="buscador">
+        <svg
+          className="buscador-icona"
+          viewBox="0 0 24 24"
+          width="24"
+          height="24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          aria-hidden="true"
+        >
+          <circle cx="10.5" cy="10.5" r="6.5" />
+          <line x1="15.5" y1="15.5" x2="21" y2="21" />
+        </svg>
+        <input
+          type="search"
+          placeholder="Cerca receptes vegetarianes"
+          value={cerca}
+          onChange={(e) => setCerca(e.target.value)}
+        />
+      </label>
 
       <div className="llista">
         {receptesFiltrades.map((r) => (
