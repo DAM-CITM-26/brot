@@ -35,10 +35,24 @@ function PantallaEnConstruccio() {
 
 function PantallaReceptes() {
   const receptes = getReceptes();
+  const [cerca, setCerca] = useState("");
+
+  const receptesFiltrades = receptes.filter((r) =>
+    r.nom.toLowerCase().includes(cerca.toLowerCase().trim())
+  );
+
   return (
     <Pantalla titol="Receptes">
+      <input
+        type="search"
+        className="buscador"
+        placeholder="Cerca una recepta..."
+        value={cerca}
+        onChange={(e) => setCerca(e.target.value)}
+      />
+
       <div className="llista">
-        {receptes.map((r) => (
+        {receptesFiltrades.map((r) => (
           <TargetaRecepta key={r.id} recepta={r} />
         ))}
       </div>
