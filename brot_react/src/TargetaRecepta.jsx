@@ -13,7 +13,7 @@ export default function TargetaRecepta({ recepta }) {
         </span>
         <h2 className="targeta-nom">{recepta.nom}</h2>
         <p className="targeta-meta">
-          {recepta.minuts} min - {recepta.racions} racions
+          {recepta.minuts} min - {recepta.racions} {recepta.racions === 1 ? "ració" : "racions"}
         </p>
       </div>
 

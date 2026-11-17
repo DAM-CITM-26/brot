@@ -11,7 +11,7 @@ const PESTANYES = [
   { id: "perfil", etiqueta: "Perfil", icona: "/perfil.svg" },
 ];
 
-const IMATGE_CONSTRUCCIO = "\Hello Kitty en construcción.png";
+const IMATGE_CONSTRUCCIO = "/Hello Kitty en construcción.png";
 
 function Pantalla({ titol, children }) {
   return (
@@ -29,7 +29,6 @@ function PantallaEnConstruccio() {
     <img
       src={IMATGE_CONSTRUCCIO}
       alt="En construcció"
-      className="imatge-construccio"
     />
   );
 }
@@ -129,7 +128,7 @@ export default function App() {
         {PESTANYES.map((p) => (
           <button
             key={p.id}
-            className={`pestanya ${pestanya === p.id ? "activa" : ""}`} //mir
+            className={`pestanya ${pestanya}`} //mir
             onClick={() => setPestanya(p.id)}
           >
             <img src={p.icona} alt="" className="icona" />
