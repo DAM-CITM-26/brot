@@ -5,7 +5,7 @@ export const receptes = [
     origen: "app",
     minuts: 25,
     racions: 2,
-    imatge: "",
+    imatge: "public/cigrons.png",
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const receptes = [
     origen: "app",
     minuts: 35,
     racions: 2,
-    imatge: "",
+    imatge: "public/tofu.jpeg",
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const receptes = [
     origen: "meves",
     minuts: 30,
     racions: 1,
-    imatge: "",
+    imatge: "public/crema.jpg",
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ export const receptes = [
     origen: "comunitat",
     minuts: 50,
     racions: 2,
-    imatge: "",
+    imatge: "public/lasanya.jpg",
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ export const receptes = [
     origen: "comunitat",
     minuts: 50,
     racions: 2,
-    imatge: "",
+    imatge: "public/macarrons.jpeg",
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ export const receptes = [
     origen: "app",
     minuts: 15,
     racions: 2,
-    imatge: "",
+    imatge: "public/hummus.jpeg",
   },
   {
     id: 7,
@@ -53,7 +53,7 @@ export const receptes = [
     origen: "app",
     minuts: 40,
     racions: 3,
-    imatge: "",
+    imatge: "public/curry.jpeg",
   },
   {
     id: 8,
@@ -61,7 +61,7 @@ export const receptes = [
     origen: "meves",
     minuts: 20,
     racions: 1,
-    imatge: "",
+    imatge: "public/quinoa.jpeg",
   },
   {
     id: 9,
@@ -69,7 +69,7 @@ export const receptes = [
     origen: "comunitat",
     minuts: 35,
     racions: 4,
-    imatge: "",
+    imatge: "public/hamburguesa.webp",
   },
   {
     id: 10,
@@ -77,7 +77,7 @@ export const receptes = [
     origen: "comunitat",
     minuts: 45,
     racions: 2,
-    imatge: "",
+    imatge: "public/escalivada_ous.jpg",
   },
 ];
 
