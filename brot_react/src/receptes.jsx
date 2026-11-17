@@ -39,6 +39,46 @@ export const receptes = [
     racions: 2,
     imatge: "",
   },
+  {
+    id: 6,
+    nom: "Hummus amb crudités",
+    origen: "app",
+    minuts: 15,
+    racions: 2,
+    imatge: "",
+  },
+  {
+    id: 7,
+    nom: "Curry de llenties",
+    origen: "app",
+    minuts: 40,
+    racions: 3,
+    imatge: "",
+  },
+  {
+    id: 8,
+    nom: "Amanida de quinoa",
+    origen: "meves",
+    minuts: 20,
+    racions: 1,
+    imatge: "",
+  },
+  {
+    id: 9,
+    nom: "Hamburguesa de mongetes negres",
+    origen: "comunitat",
+    minuts: 35,
+    racions: 4,
+    imatge: "",
+  },
+  {
+    id: 10,
+    nom: "Escalivada amb ous",
+    origen: "comunitat",
+    minuts: 45,
+    racions: 2,
+    imatge: "",
+  },
 ];
 
 export function getReceptes() {
