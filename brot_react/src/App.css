@@ -1,0 +1,213 @@
+.pantalla {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 84px;
+  padding-bottom: 110px;
+}
+
+.capcalera {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 24px 24px 16px;
+  background: #F1F6F2;
+  border-bottom: 2px solid #C0D9C2;
+}
+
+.titol {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #242424;
+}
+
+.cos {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 24px 0;
+}
+
+.buscador {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  height: 48px;
+  padding: 0 18px;
+  margin-bottom: 16px;
+  background: #f1f6f2;
+  border: 2px solid #c0d9c2;
+  border-radius: 10px;
+  box-sizing: border-box;
+  cursor: text;
+}
+
+.buscador-icona {
+  flex-shrink: 0;
+  color: #4c1223;
+}
+
+.buscador input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font: inherit;
+  font-size: 16px;
+  color: #242424;
+}
+
+.buscador input::-webkit-search-cancel-button {
+  cursor: pointer;
+  background-color: #4c1223; /* no funciona */
+}
+
+.filtres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.filtre {
+  padding: 6px 14px;
+  border: transparent;
+  border-radius: 999px;
+  background: #FFFFFF;
+  color: #242424;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.filtre-actiu {
+  background: #FCEEF2;
+}
+
+.llista {
+  width: 100%;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.targeta {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 12px;
+}
+
+.targeta-imatge {
+  width: 70px;
+  height: 70px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #5B1A2E;
+  background: #DDE9DF;
+}
+
+.targeta-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 4px;
+}
+
+.insignia {
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.insignia-app {
+  background: #FCEEF2;
+  color: #9D5166;
+}
+
+.insignia-meves,
+.insignia-comunitat {
+  background: #E3EDE5;
+  color: #1F3A28;
+}
+
+.targeta-nom {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  color: #242424;
+}
+
+.targeta-meta {
+  margin: 0;
+  font-size: 13px;
+  color: #5B1A2E;
+}
+
+.targeta-guardar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  color: #5B1A2E;
+  cursor: pointer;
+}
+
+.barra {
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  width: calc(100% - 32px);
+  max-width: 420px;
+  display: flex;
+  padding: 6px;
+  background: #C0D9C2;
+  border-radius: 24px;
+}
+
+.indicador {
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 6px;
+  width: calc((100% - 12px) / 3);
+  background: #B7D0B9;
+  border-radius: 20px;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pestanya {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 0;
+  border: none;
+  background: transparent;
+  color: #242424;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.icona {
+  width: 24px;
+  height: 24px;
+}
