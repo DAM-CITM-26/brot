@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import "./index.css";
-import { getReceptes } from "./receptes.jsx";
+import { getReceptes } from "./receptes.js";
 import TargetaRecepta from "./TargetaRecepta";
 import { FILTRES, filtreReceptes } from "./filtreReceptes.js";
 
