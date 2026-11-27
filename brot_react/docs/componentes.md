@@ -24,7 +24,7 @@ App
 
 ## Pàgines (`src/pages/`)
 
-- **`PantallaReceptes`** (`src/pages/PantallaReceptes.jsx`): pantalla principal. Carrega les receptes des de `src/data/receptes.js`, gestiona el cercador i els botons de filtre amb `src/utils/filtreReceptes.js`, i mostra la llista de `TargetaRecepta` (o un missatge si no hi ha resultats).
+- **`PantallaReceptes`** (`src/pages/PantallaReceptes.jsx`): pantalla principal. Carrega les receptes des de `src/data/receptes.js`, guarda l'estat de `cerca` i `filtresActius` amb `useState`, filtra la llista amb `filtrarReceptes` de `src/utils/filtreReceptes.js`, i mostra la llista de `TargetaRecepta` (o un missatge si no hi ha resultats).
 - **`PantallaBalanc`** (`src/pages/PantallaBalanc.jsx`): pantalla de "Balanç setmanal". De moment mostra `PantallaEnConstruccio`.
 - **`PantallaPerfil`** (`src/pages/PantallaPerfil.jsx`): pantalla de "Perfil". De moment mostra `PantallaEnConstruccio`.
 

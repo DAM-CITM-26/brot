@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 export const FILTRES = [
   {
     id: "sense-lactics",
@@ -23,17 +21,8 @@ export const FILTRES = [
   },
 ];
 
-export function filtreReceptes(receptes) {
-  const [cerca, setCerca] = useState("");
-  const [filtresActius, setFiltresActius] = useState([]);
-
-  const alternaFiltre = (id) => {
-    setFiltresActius((actius) =>
-      actius.includes(id) ? actius.filter((f) => f !== id) : [...actius, id]
-    );
-  };
-
-  const receptesFiltrades = receptes.filter((r) => {
+export function filtrarReceptes(receptes, cerca, filtresActius) {
+  return receptes.filter((r) => {
     const coincideixNom = r.nom
       .toLowerCase()
       .includes(cerca.toLowerCase().trim());
@@ -44,6 +33,4 @@ export function filtreReceptes(receptes) {
 
     return coincideixNom && compleixFiltres;
   });
-
-  return { cerca, setCerca, filtresActius, alternaFiltre, receptesFiltrades };
 }

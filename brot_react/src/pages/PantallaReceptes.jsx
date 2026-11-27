@@ -1,12 +1,21 @@
+import { useState } from "react";
 import Pantalla from "../components/Pantalla";
 import TargetaRecepta from "../components/TargetaRecepta";
 import { getReceptes } from "../data/receptes";
-import { FILTRES, filtreReceptes } from "../utils/filtreReceptes";
+import { FILTRES, filtrarReceptes } from "../utils/filtreReceptes";
 
 export default function PantallaReceptes() {
+  const [cerca, setCerca] = useState("");
+  const [filtresActius, setFiltresActius] = useState([]);
+
+  const alternaFiltre = (id) => {
+    setFiltresActius((actius) =>
+      actius.includes(id) ? actius.filter((f) => f !== id) : [...actius, id]
+    );
+  };
+
   const receptes = getReceptes();
-  const { cerca, setCerca, filtresActius, alternaFiltre, receptesFiltrades } =
-    filtreReceptes(receptes);
+  const receptesFiltrades = filtrarReceptes(receptes, cerca, filtresActius);
 
   return (
     <Pantalla titol="Receptes">
