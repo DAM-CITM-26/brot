@@ -23,7 +23,7 @@ Exemple:
   origen: "app",
   minuts: 25,
   racions: 2,
-  imatge: "/cigrons.png",
+  imatge: "./cigrons.png",
   etiquetes: ["sense-lactics", "alt-proteines", "sense-fruits-secs"],
 }
 ```
