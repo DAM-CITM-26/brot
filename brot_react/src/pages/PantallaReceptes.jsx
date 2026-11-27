@@ -38,6 +38,7 @@ export default function PantallaReceptes() {
           <input
             type="search"
             placeholder="Cerca receptes vegetarianes"
+            aria-label="Cerca receptes vegetarianes"
             value={cerca}
             onChange={(e) => setCerca(e.target.value)}
           />

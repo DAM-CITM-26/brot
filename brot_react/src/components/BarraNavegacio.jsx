@@ -16,7 +16,8 @@ export default function BarraNavegacio({ pestanya, setPestanya }) {
       {PESTANYES.map((p) => (
         <button
           key={p.id}
-          className={`pestanya ${pestanya}`}
+          type="button"
+          className={p.id === pestanya ? "pestanya activa" : "pestanya"}
           onClick={() => setPestanya(p.id)}
         >
           <img src={p.icona} alt="" className="icona" />
