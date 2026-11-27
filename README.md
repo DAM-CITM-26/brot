@@ -1,38 +1,54 @@
-# BROT
-# Cómo arrancar el proyecto
-Desde la terminal, sitúate en la carpeta del proyecto y ejecuta:
+# brot.
 
+Aplicació web feta amb React i Vite per explorar, cercar i filtrar receptes vegetarianes.
+
+## Què inclou ara mateix
+
+- Llistat de receptes vegetarianes amb imatge, origen (`app`, `meves` o `comunitat`), temps de preparació i racions.
+- Cercador de receptes per nom.
+- Filtres combinables (sense làctics, menys de 30 minuts, alt en proteïnes i sense fruits secs).
+- Botó per marcar receptes com a guardades.
+- Barra de navegació inferior amb les pestanyes de Receptes, Balanç setmanal (en construcció) i Perfil (en construcció).
+
+## Estructura del projecte
+
+```text
+├── docs/
+│   ├── componentes.md
+│   └── datos.md
+├── public/                 # Imatges de les receptes i icones
+└── src/
+    ├── components/         # Components reutilitzables (Pantalla, TargetaRecepta, BarraNavegacio, PantallaEnConstruccio)
+    ├── pages/              # Pantalles principals (PantallaReceptes, PantallaBalanc, PantallaPerfil)
+    ├── data/               # Dades de prova (receptes.js)
+    ├── utils/              # Lògica de cerca i filtres (filtreReceptes.js)
+    ├── App.jsx
+    ├── App.css
+    ├── index.css
+    └── main.jsx
+```
+
+## Com executar el projecte
+
+1. Instal·lar les dependències:
+
+```bash
 npm install
+```
 
+2. Obrir el servidor de desenvolupament:
+
+```bash
 npm run dev
+```
 
-npm install instala las dependencias (solo la primera vez o tras cambiar package.json).
-npm run dev arranca el servidor de desarrollo. La terminal mostrará una URL local (normalmente http://localhost:5173) que puedes abrir en el navegador. Los cambios se recargan automáticamente.
+3. Generar la versió de producció:
 
+```bash
+npm run build
+```
 
-# Qué hace cada script
-main.jsx — Punto de entrada. Monta el componente <App /> dentro del elemento #root del HTML usando createRoot y StrictMode.
-App.jsx — Componente principal. Gestiona la pestaña activa (Receptes / Balanç / Perfil) y renderiza la pantalla correspondiente. Incluye la barra de navegación inferior con el indicador deslizante.
-receptes.js — Datos. Exporta el array receptes y la función getReceptes() que lo devuelve.
-filtreReceptes.js — Lógica de filtrado. Exporta FILTRES (definición de cada filtro) y el hook filtreReceptes(receptes), que gestiona el estado de búsqueda y filtros activos y devuelve la lista filtrada.
-TargetaRecepta.jsx — Componente de tarjeta. Muestra imagen, insignia de origen, nombre, minutos/raciones y un botón de favorito (corazón) con estado local.
-App.css — Estilos de los componentes de la app (pantallas, buscador, filtros, tarjetas, barra de navegación).
-index.css — Estilos globales: reset, tipografía, colores base y fondos.
+## Documentació
 
-
-
-# Esquema de conexión
-
-         main.jsx
-         └── App.jsx
-               ├── PantallaReceptes
-               │     ├── getReceptes()        ← receptes.js
-               │     ├── filtreReceptes()     ← filtreReceptes.js
-               │     │     └── FILTRES        ← filtreReceptes.js
-               │     └── TargetaRecepta       ← TargetaRecepta.jsx
-               ├── PantallaBalanc
-               └── PantallaPerfil
-
-
-               Estilos:  App.jsx → App.css
-               main.jsx → index.css
+- [Dades](docs/datos.md)
+- [Components](docs/componentes.md)
