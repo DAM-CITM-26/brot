@@ -44,5 +44,5 @@ Es poden activar diversos filtres alhora i combinar-los amb la cerca per nom.
 Ara mateix no hi ha base de dades ni persistència; tot es gestiona amb `useState`:
 
 - `pestanya` (`src/App.jsx`): pestanya activa de la navegació (`"receptes"`, `"balanc"` o `"perfil"`).
-- `cerca` i `filtresActius` (`src/utils/filtreReceptes.js`): text escrit al cercador i llista d'identificadors dels filtres activats.
+- `cerca` i `filtresActius` (`src/pages/PantallaReceptes.jsx`): text escrit al cercador i llista d'identificadors dels filtres activats. Les receptes es filtren amb la funció pura `filtrarReceptes(receptes, cerca, filtresActius)` de `src/utils/filtreReceptes.js`.
 - `guardada` (`src/components/TargetaRecepta.jsx`): booleà per marcar o desmarcar una recepta com a guardada.
