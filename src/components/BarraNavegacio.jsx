@@ -1,7 +1,7 @@
 const PESTANYES = [
-  { id: "receptes", etiqueta: "Receptes", icona: "/receptes.svg" },
-  { id: "balanc", etiqueta: "Balanç", icona: "/balanc.svg" },
-  { id: "perfil", etiqueta: "Perfil", icona: "/perfil.svg" },
+  { id: "receptes", etiqueta: "Receptes", icona: "./receptes.svg" },
+  { id: "balanc", etiqueta: "Balanç", icona: "./balanc.svg" },
+  { id: "perfil", etiqueta: "Perfil", icona: "./perfil.svg" },
 ];
 
 export default function BarraNavegacio({ pestanya, setPestanya }) {

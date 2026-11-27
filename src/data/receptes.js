@@ -5,7 +5,7 @@ export const receptes = [
     origen: "app",
     minuts: 25,
     racions: 2,
-    imatge: "/cigrons.png",
+    imatge: "./cigrons.png",
     etiquetes: ["sense-lactics", "alt-proteines", "sense-fruits-secs"],
   },
   {
@@ -14,7 +14,7 @@ export const receptes = [
     origen: "app",
     minuts: 35,
     racions: 2,
-    imatge: "/tofu.jpeg",
+    imatge: "./tofu.jpeg",
     etiquetes: ["sense-lactics", "alt-proteines", "sense-fruits-secs"],
   },
   {
@@ -23,7 +23,7 @@ export const receptes = [
     origen: "meves",
     minuts: 30,
     racions: 1,
-    imatge: "/crema.jpg",
+    imatge: "./crema.jpg",
     etiquetes: ["sense-lactics", "sense-fruits-secs"],
   },
   {
@@ -32,7 +32,7 @@ export const receptes = [
     origen: "comunitat",
     minuts: 50,
     racions: 2,
-    imatge: "/lasanya.jpg",
+    imatge: "./lasanya.jpg",
     etiquetes: ["sense-fruits-secs"],
   },
   {
@@ -41,7 +41,7 @@ export const receptes = [
     origen: "comunitat",
     minuts: 50,
     racions: 2,
-    imatge: "/macarrons.jpeg",
+    imatge: "./macarrons.jpeg",
     etiquetes: [],
   },
   {
@@ -50,7 +50,7 @@ export const receptes = [
     origen: "app",
     minuts: 15,
     racions: 2,
-    imatge: "/hummus.jpeg",
+    imatge: "./hummus.jpeg",
     etiquetes: ["sense-lactics", "alt-proteines", "sense-fruits-secs"],
   },
   {
@@ -59,7 +59,7 @@ export const receptes = [
     origen: "app",
     minuts: 40,
     racions: 3,
-    imatge: "/curry.jpeg",
+    imatge: "./curry.jpeg",
     etiquetes: ["sense-lactics", "alt-proteines", "sense-fruits-secs"],
   },
   {
@@ -68,7 +68,7 @@ export const receptes = [
     origen: "meves",
     minuts: 20,
     racions: 1,
-    imatge: "/quinoa.jpeg",
+    imatge: "./quinoa.jpeg",
     etiquetes: ["sense-lactics", "alt-proteines"],
   },
   {
@@ -77,7 +77,7 @@ export const receptes = [
     origen: "comunitat",
     minuts: 35,
     racions: 4,
-    imatge: "/hamburguesa.webp",
+    imatge: "./hamburguesa.webp",
     etiquetes: ["sense-lactics", "alt-proteines", "sense-fruits-secs"],
   },
   {
@@ -86,7 +86,7 @@ export const receptes = [
     origen: "comunitat",
     minuts: 45,
     racions: 2,
-    imatge: "/escalivada_ous.jpg",
+    imatge: "./escalivada_ous.jpg",
     etiquetes: ["sense-lactics", "alt-proteines", "sense-fruits-secs"],
   },
 ];

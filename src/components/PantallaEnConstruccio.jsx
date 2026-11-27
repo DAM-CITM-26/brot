@@ -1,4 +1,4 @@
-const IMATGE_CONSTRUCCIO = "/Hello Kitty en construcción.png";
+const IMATGE_CONSTRUCCIO = "./Hello Kitty en construcción.png";
 
 export default function PantallaEnConstruccio() {
   return (
