@@ -61,9 +61,16 @@
   color: #242424;
 }
 
-.buscador input::-webkit-search-cancel-button {
+/*.buscador input::-webkit-search-cancel-button {
   cursor: pointer;
-  background-color: #4c1223; /* no funciona */
+  background-color: #4c1223; //no funciona
+}*/
+.buscador input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239D5166' stroke-width='2.5' stroke-linecap='round'><line x1='6' y1='6' x2='18' y2='18'/><line x1='18' y1='6' x2='6' y2='18'/></svg>") center / 16px 16px no-repeat;
 }
 
 .filtres {
