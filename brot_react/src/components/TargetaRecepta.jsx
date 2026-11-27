@@ -17,7 +17,12 @@ export default function TargetaRecepta({ recepta }) {
         </p>
       </div>
 
-      <button className="targeta-guardar" onClick={() => setGuardada(!guardada)}>
+      <button
+        type="button"
+        className="targeta-guardar"
+        onClick={() => setGuardada(!guardada)}
+        aria-label={guardada ? "Treure de guardades" : "Guardar recepta"}
+      >
         {guardada ? "♥" : "♡"}
       </button>
     </article>
