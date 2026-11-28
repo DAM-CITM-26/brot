@@ -1,12 +1,25 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Pantalla from "../components/Pantalla";
 import TargetaRecepta from "../components/TargetaRecepta";
 import { getReceptes } from "../data/receptes";
+import { obtenirReceptes } from "../services/receptesApi";
 import { FILTRES, filtrarReceptes } from "../utils/filtreReceptes";
 
 export default function PantallaReceptes() {
   const [cerca, setCerca] = useState("");
   const [filtresActius, setFiltresActius] = useState([]);
+  const [receptes, setReceptes] = useState([]);
+  const [carregant, setCarregant] = useState(true);
+
+  useEffect(() => {
+    obtenirReceptes()
+      .then(setReceptes)
+      .catch((error) => {
+        console.error(error);
+        setReceptes(getReceptes()); // si falla la API, usamos las recetas locales
+      })
+      .finally(() => setCarregant(false));
+  }, []);
 
   const alternaFiltre = (id) => {
     setFiltresActius((actius) =>
@@ -14,7 +27,6 @@ export default function PantallaReceptes() {
     );
   };
 
-  const receptes = getReceptes();
   const receptesFiltrades = filtrarReceptes(receptes, cerca, filtresActius);
 
   return (
@@ -59,10 +71,11 @@ export default function PantallaReceptes() {
         </div>
 
         <div className="llista">
+          {carregant && <p>Carregant receptes…</p>}
           {receptesFiltrades.map((r) => (
             <TargetaRecepta key={r.id} recepta={r} />
           ))}
-          {receptesFiltrades.length === 0 && (
+          {!carregant && receptesFiltrades.length === 0 && (
             <p>No s'ha trobat cap recepta.</p>
           )}
         </div>
